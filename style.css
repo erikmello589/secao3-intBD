@@ -1,0 +1,126 @@
+body 
+{
+	background-color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+input
+{
+    margin-top: 10px;
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button
+{
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover
+{
+	background-color: #3e8e41;
+}
+
+button[type="button"]:hover 
+{
+	background-color: #ce1111;
+}
+
+.container {
+	background-color: #ccccccb7;
+	width: 700px;
+	margin: 0 auto;
+	border: 3px solid #d61912;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.text
+{
+	width: 185px;
+	display: inline-block;
+}
+
+.option
+{
+	margin-left: 60px;
+}
+
+.button
+{
+    margin-top: 7px;
+    margin-left: 95px;
+}
+
+.button2
+{
+	margin-left: 200px;
+}
+
+.align
+{
+	margin-right: 26px;
+}
+
+.auxAlign
+{
+	margin-left: 44px;
+}
+
+.inputDate
+{
+	margin-left: 26px;
+}
+
+table
+{
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 1px;
+	margin: 0 auto;
+	margin-top: 25px;
+	border-collapse: collapse;
+	width: 98%;
+	font-size: 12px;
+}
+
+th, td 
+{
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #000000a9;
+}
+
+th 
+{
+	background-color: #e93c3cf3;
+	font-weight: bold;
+}
+
+tr
+{
+	background-color: #ccccccb7;
+}
+
+tr:hover 
+{
+	background-color: white;
+}
+
+b
+{
+	color: #ce1111;
+	font-size: 20px;
+}
+
+p
+{
+	font-weight: bold;
+	font-size: small;
+}

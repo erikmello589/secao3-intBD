@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Projeto 2 - Provider It</title>
+</head>
+<body>
+
+    <table>
+
+        <div class="container">
+        <form>
+  
+            <label for="name" class="text">Nome<b>*</b>:</label>
+            <input type="text" size="55" id="name" name="name" onblur="validaNome(this)" pattern=".{4,}" title="No mínimo 4 caracteres" placeholder="Ex: Erik Mello Guedes" required>
+            
+            <br>
+
+            <label for="RG" class="text">RG<b>*</b></label>
+            <input class="align" type="tel" size="13" id="rg" name="rg" oninput="mascaraRg(this)" pattern=".{12,}" title="No mínimo 9 caracteres" placeholder="Ex: 12.345.678-9" required>
+
+            <label for="CPF">CPF<b>*</b>:</label>
+            <input type="text" style="margin-left: 90px;" size="13" id="cpf" name="cpf" oninput="mascaraCpf(this)" onblur="validaCpf(this)" pattern=".{14,}" title="No mínimo 11 caracteres" placeholder="Ex: 123.456.789-00" required>
+
+            <br>
+
+            <label for="cep" class="text">CEP<b>*</b>:</label>
+            <input type="text" size="13" id="cep" name="cep" onblur="consultaEndereco()" oninput="limitaCep(this)" pattern=".{8,}" title="No mínimo 8 caracteres" placeholder="Ex: 12345678" required>
+
+            <br>
+
+            <label for="endereco" class="text">Endereço<b>*</b>:</label>
+            <input type="text" size="55" id="endereco" name="endereco" placeholder="Ex: Rua Clarimundo de Mello - Quintino/RJ" required>
+                
+            <br>
+
+            <label for="numero" class="text">Número<b>*</b>:</label>
+            <input class="align" type="text" size="7" id="numeroCasa" name="numero" placeholder="Ex: 175" required>
+
+            <label for="complemento" style="margin-left: 38px;">Complemento:</label>
+            <input style="margin-left:  38px;" type="text" name="complemento" size="13" id="complemento">
+
+            <br>
+
+            <label for="sex" class="text">Sexo<b>*</b>:</label>
+            <select id="sex" class="align">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+
+            <label for="datanas" class="auxAlign">Data Nascimento<b>*</b>:</label>
+            <input class="inputDate" name="data" type="date" size="13" id="nasdata" max="2023-03-29" title="digite uma data válida" required>
+            <br>
+
+            <label for="sitCivil" class="text">Situação Cívil<b>*</b>:</label>
+            <input type="radio" name="sitCivil" value="solteiro(a)" required>Solteiro(a)
+            <input class="option" type="radio" name="sitCivil" value="Casado(a)">Casado(a)
+            <input class="option" type="radio" name="sitCivil" value="Viúvo(a)">Viúvo(a)
+
+            <p><b>*</b>Campos obrigatórios.</p>
+
+            <button type="submit" id="botao" class="button2" value="Enviar Dados" onclick="geraBancoDados()">Enviar Dados</button>
+            <button type="button" class="button"  onclick="limparDados()" value="Limpar Dados">Limpar Dados</button>
+  
+        </form>
+        </div>
+    </table>
+
+    <table border="1" id="tabela">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>RG</th>
+                <th>CPF</th>
+                <th>CEP</th>
+                <th>Endereço</th>
+                <th>Número</th>
+                <th>Complemento</th>
+                <th>Sexo</th>
+                <th>Data de Nascimento</th>
+                <th>Situação Civil</th>
+                <th>Deletar</th>
+                </tr>
+        </thead>
+         
+        <tbody id="tbody"></tbody>
+        
+    </table>
+
+</body>
+</html>
